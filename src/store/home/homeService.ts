@@ -5,7 +5,8 @@ const API_WEATHER = 'https://api.openweathermap.org/data/2.5/onecall?exclude=min
 
 const getCities = async(userData: string) => {
   const response = await axios.get(`${API_CITIES}?q=${userData}`)
-  if (response.data) {
+  console.log('response',response)
+  if (response.data.length >= 0) {
     return response.data[0]
   }
 }
