@@ -39,7 +39,7 @@ export const ResultsApp = () => {
               ))
             }
           </div>
-        </> : (isSearching && !isError) ? <SpinnerApp /> : <NotFount />
+        </> : isSearching ? <SpinnerApp /> : isError ? <NotFount /> : null
       }
     </div>
   )

@@ -1,0 +1,1 @@
+export { ResultsApp } from './results'

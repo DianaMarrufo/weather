@@ -4,7 +4,7 @@ import { FormApp } from '@/components/organisms/form'
 import { ResultsApp } from '../../components/organisms/results/results';
 import styles from './home.module.scss'
 
-export const HomePage = () => {
+const HomePage = () => {
   return (
     <Base>
       <div className={styles['home']}>
@@ -18,3 +18,5 @@ export const HomePage = () => {
     </Base>
   )
 }
+
+export default HomePage
