@@ -2,7 +2,11 @@ import React from 'react'
 import { HeaderApp } from '@/components/organisms/header'
 import styles from './base.module.scss'
 
-export const Base = ({children}) => {
+interface IBaseProps {
+  children: JSX.Element | JSX.Element[];
+}
+
+export const Base = ({children}: IBaseProps) => {
   return (
     <div className={styles['base']}>
       <HeaderApp />
