@@ -1,0 +1,28 @@
+@import "../../../styles/variables";
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__loading {
+    width: 60px;
+    height: 60px;
+    border: 8px solid;
+    border-color: $accent transparent $primary transparent;
+    border-radius: 50%;
+    animation: spin 1.2s linear infinite;
+    @media (max-width: $breakpoint-xs) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

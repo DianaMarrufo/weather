@@ -1,0 +1,11 @@
+@import '../../../styles/variables';
+
+.nofound {
+  text-align: center;
+  &__message {
+    margin-bottom: 40px;
+    font-family: $font-medium;
+    font-size: 20px;
+    color: $accent;
+  }
+}

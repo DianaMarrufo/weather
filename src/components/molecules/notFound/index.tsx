@@ -1,0 +1,1 @@
+export { NotFount } from './notFount';

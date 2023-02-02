@@ -1,0 +1,16 @@
+@import '../../../styles/variables';
+
+.results {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  &__title {
+    margin-bottom: 40px;
+  }
+  &__cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
