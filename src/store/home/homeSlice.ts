@@ -51,6 +51,7 @@ export const homeSlice = createSlice({
       .addCase(getCities.fulfilled, (state, action) => {
         state.isLoading = false
         state.cities = action.payload as ICities
+        state.isError = action.payload ? false : true
       })
       .addCase(getCities.rejected, (state, action ) => {
         state.isLoading = false

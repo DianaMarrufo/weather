@@ -21,9 +21,9 @@ export const Card = ({data}: ICardProps) => {
       <div className={styles['card__month']}>{month} {date}</div>
       <div className={styles['card__description']}>{data.weather[0].description}</div>
       <div className={styles['card__temp']}>
-        <span className={styles['card__temp-max']}>{data.temp.max}</span>
+        <span className={styles['card__temp-max']}>{data.temp.max}°</span>
         <span className={styles['card__temp-separator']}>/</span>
-        <span className={styles['card__temp-min']}>{data.temp.min}</span>
+        <span className={styles['card__temp-min']}>{data.temp.min}°</span>
       </div>
     </div>
   )

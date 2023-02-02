@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './notfound.module.scss'
 import { ErrorCode } from '../../../store/commonTypes';
 
-export const NotFount = () => {
+export const NotFound = () => {
   return (
     <div className={styles['nofound']}>
       <div className={styles['nofound__message']}>

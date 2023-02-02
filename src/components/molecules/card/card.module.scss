@@ -12,6 +12,9 @@
   @media (max-width: $breakpoint-md) {
     width: calc( 50% - 48px);
   }
+  @media (max-width: $breakpoint-xs) {
+    width: calc( 100% - 48px);
+  }
   &__day {
     font-size: 16px;
     color: $secondary;

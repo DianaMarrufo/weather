@@ -1,3 +1,4 @@
+import { ErrorCode } from '../commonTypes';
 export interface HomeState {
   cities: ICities | null;
   weather: IWeather | null; 

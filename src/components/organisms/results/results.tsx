@@ -5,25 +5,28 @@ import { useEffect } from 'react';
 import { reset, getWeather } from '@/store/home/homeSlice';
 import { Card } from '@/components/molecules/card/card';
 import { SpinnerApp } from '@/components/atoms/spinner';
-import { NotFount } from '@/components/molecules/notFound';
+import { NotFound } from '../../molecules/notFound/notFound';
 
 export const ResultsApp = () => {
 
   const dispatch = useAppDispatch()
 
-  const { cities, weather, isSearching, isError, message } = useAppSelector(
+  const { cities, weather, isSearching, isError } = useAppSelector(
     (state) => state.home
   )
 
+  useEffect(() => {
+    return () => {
+      dispatch(reset())
+    }
+  }, [dispatch])
+  
   useEffect(() => {
     const dataWeather = { 
       lat: cities?.lat ?? '', 
       long: cities?.long ?? ''
     }
-    cities && dispatch(getWeather(dataWeather))
-    return () => {
-      dispatch(reset())
-    }
+    cities?.display && dispatch(getWeather(dataWeather))
   }, [dispatch, cities])
 
   return (
@@ -39,7 +42,7 @@ export const ResultsApp = () => {
               ))
             }
           </div>
-        </> : isSearching ? <SpinnerApp /> : isError ? <NotFount /> : null
+        </> : isSearching ? <SpinnerApp /> : isError ? <NotFound /> : null
       }
     </div>
   )
