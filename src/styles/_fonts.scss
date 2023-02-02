@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'OatmealPro-Regular';
+  src: url('/fonts/OatmealPro-Regular.woff2') format('woff2'),
+        url('/fonts/OatmealPro-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OatmealPro-Medium';
+  src: url('/fonts/OatmealPro-Medium.woff2') format('woff2'),
+        url('/fonts/OatmealPro-Medium.woff') format('woff'),
+        url('/fonts/OatmealPro-Medium.ttf') format('truetype'),
+        url('/fonts/OatmealPro-Medium.otf');
+  font-weight: normal;
+  font-style: normal;
+}

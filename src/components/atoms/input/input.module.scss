@@ -1,0 +1,60 @@
+@import '../../../styles/variables';
+
+.form-input {
+  position: relative;
+  margin-bottom: 16px;
+  &__input {
+    padding: 0 12px;
+    padding-top: 12px;
+    width: calc( 100% - 34px );
+    height: 40px;
+    font-family: $font-stack;
+    font-size: 16px;
+    outline: none;
+    color: $secondary;
+    background-color: $pure;
+    border: 1px $ceres solid;
+    border-radius: 6px;
+    @media (max-width: $breakpoint-sm) {
+      padding-top: 10px;
+      font-size: 14px;
+    }
+    ~ label {
+      font-size: 16px;
+      color: $vanth;
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      margin: auto 0;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      @media (max-width: $breakpoint-sm) {
+        font-size: 14px;
+      }
+    }
+    &:focus ~ label, &-label {
+      top: 6px!important;
+      font-size: 12px!important;
+    }
+    &--error {
+      border: 1px $sword solid;
+    }
+  }
+  &__error {
+    margin-top: 6px;
+    display: block;
+    color: $sword;
+    font-size: 12px;
+    line-height: 1;
+    text-align: left;
+  }
+  &__eye {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+}

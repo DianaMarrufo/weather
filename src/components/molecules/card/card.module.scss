@@ -1,0 +1,54 @@
+@import '../../../styles/variables';
+
+.card {
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  width: calc( 25% - 48px);
+  background-color: $pure;
+  border: 1px solid $ceres;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgb(16 47 96 / 8%);
+  @media (max-width: $breakpoint-md) {
+    width: calc( 50% - 48px);
+  }
+  &__day {
+    font-size: 16px;
+    color: $secondary;
+    line-height: 1;
+  }
+  &__month {
+    margin-bottom: 6px;
+    font-family: $font-medium;
+    font-weight: 600;
+    font-size: 20px;
+    color: $accent;
+  }
+  &__image {
+    margin-bottom: 6px;
+    font-size: 16px;
+    color: $secondary;
+  }
+  &__description {
+    font-size: 12px;
+    color: $vanth;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+  &__temp {
+    font-size: 20px;
+    &-max {
+      font-family: $font-medium;
+      color: $primary;
+    }
+    &-separator {
+      color: $vanth;
+      margin: 0 2px;
+    }
+    &-min {
+      font-family: $font-medium;
+      color: $secondary;
+    }
+  }
+}

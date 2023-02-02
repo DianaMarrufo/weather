@@ -1,0 +1,68 @@
+@import './variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-stack;
+  color: $secondary;
+  background-color: $pure;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  p {
+    font-family: $font-stack;
+    font-weight: 400;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 18px;
+    line-height: 1.2;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 14px;
+    }
+  }
+  ul {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+  }
+  img {
+    max-width: 100%;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-medium;
+    font-weight: 500;
+    line-height: 1.2;
+    color: $secondary;
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+  h1 {
+    font-size: 38px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 30px;
+    }
+  }
+  h2 {
+    font-size: 30px;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 26px;
+    }
+  }
+  h3 {
+    font-size: 24px;
+    color: $vanth;
+    @media (max-width: $breakpoint-sm) {
+      font-size: 20px;
+    }
+  }
+  [hidden] {
+    display: none;
+  }
+}
